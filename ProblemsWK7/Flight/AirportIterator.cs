@@ -26,7 +26,7 @@ namespace ProblemsWK7.Flight
                     yield return flight;
                 }
             }
-            throw new NotImplementedException();
+           
         }
 
         public void theFlight()

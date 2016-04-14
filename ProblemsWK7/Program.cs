@@ -15,7 +15,7 @@ namespace ProblemsWK7.Flight
             AirportIterator GetTheFlight = new AirportIterator();
             GetTheFlight.addFlights();
             GetTheFlight.theFlight();
-
+            Console.ReadKey();
 
         }
     }
