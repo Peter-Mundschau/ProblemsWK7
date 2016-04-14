@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProblemsWK7.Flight
+namespace ProblemsWK7
 
 {
     public class AirportIterator : IEnumerable

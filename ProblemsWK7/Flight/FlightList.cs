@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ProblemsWK7.Flight;
-namespace ProblemsWK7.Flight
+//using ProblemsWK7.Flight;
+namespace ProblemsWK7
 {
    public class FlightList
     {

@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Flight\AirportIterator.cs" />
     <Compile Include="Flight\FlightList.cs" />
+    <Compile Include="Overload Operator\Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
