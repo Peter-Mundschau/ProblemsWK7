@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProblemsWK7
 {
-    class Person
+    public class Person
     {
         public DateTime today = DateTime.Today;
         public string firstName;
@@ -15,10 +15,9 @@ namespace ProblemsWK7
         public int age;
         public string birthday;
 
-        public Person(string firstName, string lastName, DateTime birthDate, int age)
+        public Person(string birthday)
         {
            
-
             this.firstName = firstName;
             this.lastName = lastName;
             this.age = CalculateAge(birthDate);
@@ -45,10 +44,25 @@ namespace ProblemsWK7
                 age--;
             }
             Console.WriteLine("Hello {0} {1} born on {2} you are {3} years old",firstName,lastName,birthday,age);
-
+            Console.WriteLine("In the Year " + birthDate.AddYears(this.age) + "you will be" + this.age + "years old");
             Console.ReadKey();
             
         }
+
+        public static Person operator +(Person person, int age)
+        {
+            Person olderPerson = new Person(person.birthday + person.age);
+           person.birthday  = olderPerson.birthday;
+            return olderPerson;
+        }
+
+
+
+        public void In12Years()
+        {
+
+        }
+
 
         private static int CalculateAge(DateTime birthDate)
         {
