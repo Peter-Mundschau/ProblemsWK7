@@ -8,6 +8,7 @@ namespace ProblemsWK7
 {
     class Person
     {
+        public DateTime today = DateTime.Today;
         public string firstName;
         public string lastName;
         public DateTime birthDate = new DateTime();
@@ -37,8 +38,13 @@ namespace ProblemsWK7
             lastName = Console.ReadLine();
             Console.Write("Please enter your BirthDate(YYYY,MM,DD)");
             birthDate = Convert.ToDateTime(Console.ReadLine());
-            
-            Console.WriteLine("Hello {0} {1} born on {2} you are {3} years old",firstName,lastName,birthDate,age);
+            birthday = birthDate.ToShortDateString();
+            age = today.Year - birthDate.Year;
+            if (birthDate.AddYears(age) > today)
+            {
+                age--;
+            }
+            Console.WriteLine("Hello {0} {1} born on {2} you are {3} years old",firstName,lastName,birthday,age);
 
             Console.ReadKey();
             
@@ -52,6 +58,7 @@ namespace ProblemsWK7
             {
                 age--;
             }
+
             return age;
         }
 
